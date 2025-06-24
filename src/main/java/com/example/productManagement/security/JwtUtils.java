@@ -23,10 +23,10 @@ public class JwtUtils {
     private String secret;
 
     @Value("{jwt.expiration}")
-    private long expiration;
+    private String expiration;
 
     public String generateToken(String username) {
-        ChatGPT: return Jwts.builder()
+                return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
