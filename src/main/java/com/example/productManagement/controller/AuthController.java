@@ -1,14 +1,15 @@
 package com.example.productManagement.controller;
 
+import com.example.productManagement.security.JwtUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AuthController {
-    private final JwtUtil jwtUtil;
+    private final JwtUtils jwtUtil;
 
-    public AuthController(JwtUtil jwtUtil) {
+    public AuthController(JwtUtils jwtUtil) {
         this.jwtUtil = jwtUtil;
     }
 
